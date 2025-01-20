@@ -1,6 +1,8 @@
-# Moccasin Project
+# Mox Buy ME A Coffee Project
 
 🐍 Welcome to your Moccasin project!
+
+This is a Fund ME project
 
 ## Quickstart
 
