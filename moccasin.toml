@@ -1,0 +1,31 @@
+[project]
+src = "src"
+
+
+[networks.sepolia]
+url = "$SEPOLIA_RPC_URL"
+save_to_db= false
+default_account_name ="sepolia_default"
+explorer_uri = "https://eth-sepolia.blockscout.com/"
+explorer_type = "blockscout"
+
+[networks.contracts.coffee]
+deployer_script="script/deploy.py"
+
+[networks.anvil]
+url = "http://127.0.0.1:8545"
+default_account_name = "anvil1"
+deployer_script = "script/deploy_mocks.py"
+save_to_db= true
+
+[networks.anvil.contracts.price_feed]
+deployer_script = "script/deploy_mocks.py"
+
+
+
+[networks.pyevm.contracts.price_feed]
+deployer_script = "script/deploy_mocks.py"
+
+[networks.sepolia.contracts.price_feed]
+address = "0x694AA1769357215DE4FAC081bf1f309aDC325306"
+deployer_script = "script/deploy_mocks.py"
