@@ -62,3 +62,8 @@ def test_ten_funders_withdraw_balance(coffee):
     
 def test_get_rate(coffee):
     assert coffee.get_eth_to_usd_rate(SEND_VALUE)>0
+
+def test_default(coffee):
+
+    coffee.__default__(value = SEND_VALUE)
+    assert boa.env.get_balance(coffee.address)==SEND_VALUE

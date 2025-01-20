@@ -17,6 +17,6 @@ def deploy_coffee(price_feed:VyperContract)->VyperContract:
 def moccasin_main() ->VyperContract:
     active_network = get_active_network()
     price_feed:VyperContract = active_network.manifest_named("price_feed")
-    print(f"On network {active_network.name}, using  rice feed at {price_feed.address}")
+    print(f"On network {active_network.name}, using  price feed at {price_feed.address}")
     return deploy_coffee(price_feed)
   
